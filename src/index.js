@@ -24,7 +24,7 @@ root.render(
   <Route path="/" element={<App/>} />
   <Route path="/Ingresar" element={<Add/>} />
   <Route path="/EditarContacto/:id_data" element={<Pageedit/>} />
-  <Route path="/InformacionContacto/:id_data/:id_contacto" element={<Pageinfocontacto/>} />
+  <Route path="/InformacionContacto/:id_data/:idInformacion" element={<Pageinfocontacto/>} />
   <Route path="/Ingresarcontacto" element={<PagesAddContacto/>} />
   <Route path="/EditartInformacion/:id_contacto" element={<PagesEditarContac/>} />
 

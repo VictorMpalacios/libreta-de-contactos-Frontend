@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react"
+import React, { useState    } from "react"
 import { useNavigate, useParams } from "react-router-dom";
 
 const Editar = () => {
@@ -53,56 +53,16 @@ const Editar = () => {
 
     return (
 
-        <div>
-
+        <div className="main-container">
             <button onClick={() => navigate('/')}>Volver</button>
             <button onClick={EditarUno}>Obtener</button>
-            <table>
-                <thead>
 
-                    <tr>
-
-                        <th colSpan={3} >CONTACTOS</th>
-
-                    </tr>
-
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    {data.map((item, index) => {
-                        return (
-                            <tr>
-                                <th key={index}>{item.nombre}</th>
-                                <th key={index}>{item.apellido}</th>
-
-                            </tr>
-                        )
-                    })}
-
-                </tbody>
-
-
-
-
-            </table>
-
-            {/* <form onSubmit={actualizar}>
-
-                <input type="text" defaultValue={data?.nombre} name="nombre" />
-                <input type="text" defaultValue={data?.apellido} name="apellido" />
-
-
+            <form onSubmit={actualizar}>
+            <p>Ingrese su nombre: <input type="text" defaultValue={data.nombre} name="nombre" /></p>
+                <p>Ingresa su apellido: <input type="text" defaultValue={data.apellido} name="apellido" /></p>
                 <input type="submit" value="Guardar" />
 
-            </form> */}
-
-
+            </form>
         </div>
 
     )

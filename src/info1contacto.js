@@ -16,7 +16,7 @@ const Info1 = () => {
 
         const response = await axios({
             method: 'GET',  
-            url: `http://localhost:8000/contacto/${id_contacto}`,
+            url: `http://localhost:8000/datacontac/${id_data}/contacto`,
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
@@ -24,9 +24,7 @@ const Info1 = () => {
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With',
             }
         });
-
         setData(response.data);
-
     }
 
 
@@ -97,8 +95,6 @@ const Info1 = () => {
 
                                 <button onClick={()=>navigate(`/EditartInformacion/${item.id_contacto}`)}>Editar</button>
                                 <button onClick={() => Eliminarunainfo(item.id_contacto)}>eliminar</button>
-
-
 
                                 </th>
 

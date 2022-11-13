@@ -32,11 +32,11 @@ const editInfcontac = ()=>{
     const actualizar = async (event) => {
 
         event.preventDefault();
-        const { correo, Telefono, direccion, celular} = event.target
+        const { correo, telefono, direccion, celular} = event.target
 
         let datosenviados = {
             correo: correo.value,
-            Telefono: Telefono.value,
+            telefono: telefono.value,
             direccion: direccion.value,
             celular: celular.value
         }
@@ -60,10 +60,10 @@ const editInfcontac = ()=>{
             <button onClick={Editaruno}>Obtener</button>
 
             <form onSubmit={actualizar}>
-                {/* <p>Ingrese su Correo: <input type="text"  defaultValue={data?.correo} name="correo" /></p>
-                <p>Ingresa su Telefono: <input type="text"  defaultValue={data?.Telefono} name="Telefono" /></p>
-                <p>Ingrese su direccion: <input type="text"  defaultValue={data?.direccion} name="direccion" /></p>
-                <p>Ingresa su celular: <input type="text"  defaultValue={data?.celular} name="celular" /></p> */}
+                <p>Ingrese su Correo: <input type="text"  defaultValue={data.correo} name="correo" /></p>
+                <p>Ingresa su Telefono: <input type="text"  defaultValue={data.telefono} name="telefono" /></p>
+                <p>Ingrese su direccion: <input type="text"  defaultValue={data.direccion} name="direccion" /></p>
+                <p>Ingresa su celular: <input type="text"  defaultValue={data.celular} name="celular" /></p>
                 <input type="submit" value="Guardar" />
             </form>
         </div>
