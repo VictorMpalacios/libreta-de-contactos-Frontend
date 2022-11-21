@@ -12,7 +12,12 @@ const TraerContacto = () => {
         const response = await axios({
             method: 'GET',
             url: 'http://localhost:8000/datacontac',
-            headers: {},
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With',
+            },
         });
         setData(response.data);
     }
@@ -21,7 +26,12 @@ const TraerContacto = () => {
         const response = await axios({
             method: 'DELETE',
             url: `http://localhost:8000/datacontac/${id_data}`,
-            headers: {},
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With',
+            },
         });
         console.log(response);
     }

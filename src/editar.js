@@ -13,7 +13,12 @@ const Editar = () => {
         const response = await axios({
             method: 'GET',
             url: `http://localhost:8000/datacontac/${id_data}`,
-            headers: {}
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With',
+            }
         });
         setData(response.data);
     }
@@ -28,10 +33,15 @@ const Editar = () => {
         const response = await axios({
             method: 'PUT',
             url: `http://localhost:8000/datacontac/${id_data}`,
-            headers:
-            {},
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With',
+            },
             data: datosenviados
         });
+        console.log(response);
     }
     return (
         <div>
